@@ -26,12 +26,29 @@ Arguments:
 
 An argument assigns a value to a particular name:
 
-The identifier before the equals sign is the argument name, and the expression after the equals sign is the argument's value. 
+The identifier before the equals sign is the argument name,for example: `ami` `instance_type` and the expression after the equals sign is the argument's value `t2.micro`. 
 
 Blocks:
 
-A block is a container for other content.
+A block is a container for other content. There are 2 types of block;
+1. Resource block
+2. Data block
 
-A block has a type (resource in this example). Each block type defines how many labels must folow the type keyword. the resource block type expects 2 labels, which are aws_instance and first_ec2 in this exmaple.
+A block has a type (resource in this example). Each block type defines how many labels must folow the type keyword. the ``resource block`` type expects 2 labels, which are `aws_instance` and `first_ec2` in this exmaple.
 
 ![ ] <img width="672" alt="Screen Shot 2022-10-14 at 5 04 47 PM" src="https://user-images.githubusercontent.com/63433671/195950714-5e824e07-836d-498e-b7a0-5f3ba4899d87.png">
+
+
+## Basic commands in Terraform
+
+``terraform init
+``
+
+`` terraform plan``
+
+``terraform apply``
+
+`` terraform destroy``
+
+
+
