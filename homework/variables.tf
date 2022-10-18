@@ -51,3 +51,8 @@ variable "public_route_table"{
     type = string
     default = "public_rt"
 }
+
+variable "private_route_table"{
+    type = string
+    default = "private_rt"
+}
