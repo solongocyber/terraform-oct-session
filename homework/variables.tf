@@ -8,12 +8,12 @@ variable "name"{
     default = "homework_vpc"
 }
 
-variable "public_subnet" {
+variable "pub_subnet" {
 type = string
 default = "public_subnet_1"
 }
 
-variable "public_subnet_2"{
+variable "pub_subnet_2"{
     type =string
     default = "public_subnet_2"
 }
@@ -37,16 +37,6 @@ variable "az_2"{
     default = "us-east-2b"
 }
 
-variable "pub_subnet_1"{
-    type = string
-    default = "public_subnet_1"
-}
-
-variable "pub_subnet_2"{
-    type = string
-    default = "public_subnet_2"
-}
-
 variable "public_route_table"{
     type = string
     default = "public_rt"
@@ -55,4 +45,24 @@ variable "public_route_table"{
 variable "private_route_table"{
     type = string
     default = "private_rt"
+}
+
+variable "private_sub_1"{
+    type = string
+    default = "private_subnet_1"
+}
+
+variable "private_sub_2"{
+    type = string
+    default = "private_subnet_2"
+}
+
+variable "private_subnet_1_cidr"{
+    type = string
+    default = "10.0.11.0/24"
+}
+
+variable "private_subnet_2_cidr"{
+    type = string
+    default = "10.0.12.0/24"
 }
