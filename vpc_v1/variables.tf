@@ -81,3 +81,8 @@ variable "internet_gw" {
     type = string
     default = "internet_gateway"
 }
+
+variable "instance_type"{
+    type = string
+    default = "t2.micro"
+}
