@@ -19,7 +19,7 @@ resource "aws_security_group" "sg_dev"{
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = [aws_vpc.first_vpc.cidr_block]
+    cidr_blocks      = ["0.0.0.0/0"]
     
   }
 
