@@ -13,3 +13,11 @@ data "aws_ami" "amazon_linux2" {
     values = ["x86_64"]
   }
 }
+
+data "template_file" "user_data"{
+    template = file("user_data.sh")
+    vars = {
+        environment = var.env
+    }
+}
+
