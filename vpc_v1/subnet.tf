@@ -3,7 +3,7 @@ resource "aws_subnet" "public_subnet_1"{
     cidr_block = var.public_subnet_1_cidr
     availability_zone = var.az_1
     tags = {
-        Name = var.pub_subnet
+        Name = "${var.env}-pub_subnet"
     }
 }
 
@@ -12,7 +12,7 @@ resource "aws_subnet" "public_subnet_2"{
     cidr_block = var.public_subnet_2_cidr
     availability_zone = var.az_2
     tags = {
-        Name = var.pub_subnet_2
+        Name = "${var.env}-pub_subnet_2"
     }
 }
 
@@ -21,7 +21,7 @@ resource "aws_subnet" "private_subnet_1"{
     cidr_block = var.private_subnet_1_cidr
     availability_zone = var.az_1
     tags = {
-        Name = var.private_sub_1
+        Name = "${var.env}- private_sub_1"
     }
 }
 
@@ -30,6 +30,6 @@ resource "aws_subnet" "private_subnet_2"{
     cidr_block = var.private_subnet_2_cidr
     availability_zone = var.az_2
     tags = {
-        Name = var.private_sub_2
+        Name = "${var.env}- private_sub_2"
     }
 }

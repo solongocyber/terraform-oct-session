@@ -2,6 +2,9 @@ resource "aws_security_group" "sg_dev"{
     name = "dev_instance"
     description = "this sg is for dev instance"
     vpc_id = aws_vpc.first_vpc.id
+    tags = {
+      Name = "${var.env}- web-sg"
+    }
     ingress {
     description      = "for http "
     from_port        = 80

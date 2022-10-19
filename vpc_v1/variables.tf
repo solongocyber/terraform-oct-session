@@ -86,3 +86,18 @@ variable "instance_type"{
     type = string
     default = "t2.micro"
 }
+
+variable "eip" {
+    type = string
+    default = "ip"
+}
+
+variable "web-sg"{
+    type = string
+    default = "dev-sg"
+}
+
+variable "public_key"{
+    type =string
+    default = "solongo@mac"
+}

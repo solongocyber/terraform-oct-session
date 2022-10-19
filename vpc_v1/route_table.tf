@@ -1,7 +1,7 @@
 resource "aws_route_table" "public_rt"{
     vpc_id = aws_vpc.first_vpc.id
     tags = {
-        Name = var.public_route_table
+        Name = "${var.env}- public_route_table"
     }
 }
 
@@ -26,7 +26,7 @@ resource "aws_route_table_association" "public_subnet_2"{
 resource "aws_route_table" "private_rt"{
     vpc_id = aws_vpc.first_vpc.id
     tags = {
-        Name = var.private_route_table
+        Name = "${var.env}-private_route_table"
     }
 }
 

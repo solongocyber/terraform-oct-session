@@ -13,3 +13,4 @@ output "vpc_owner_id"{
 output "aws_instance_public_ip" {
     value = aws_instance.task_instance.public_ip
 }
+

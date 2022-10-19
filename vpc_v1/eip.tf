@@ -1,3 +1,6 @@
-resource "aws_eip" "homework"{
+resource "aws_eip" "eip"{
     vpc = true
+    tags = {
+        Name = "${var.env} -eip"
+    }
 }

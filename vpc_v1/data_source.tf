@@ -20,3 +20,6 @@ data "template_file" "user_data"{
     }
 }
 
+// data "template_file" "public_key"{
+//   template = file("~/.ssh/id_rsa.pub")
+// }
