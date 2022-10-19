@@ -3,6 +3,6 @@ resource "aws_nat_gateway" "homework"{
     connectivity_type = "public"
     subnet_id = aws_subnet.public_subnet_1.id
     tags = {
-        Name = var.aws_nat_gateway
+        Name = "${var.env}-nat_gw"
     }
 }

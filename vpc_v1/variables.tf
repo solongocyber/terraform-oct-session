@@ -1,11 +1,16 @@
+variable "env"{
+    type = string
+    default = "dev"
+}
+
 variable "cidr_block" {
     type = string
     default = "10.0.0.0/16"
 }
 
-variable "name"{
+variable "vpc_v1"{
     type = string
-    default = "homework_vpc"
+    default = "vpc"
 }
 
 variable "pub_subnet" {
@@ -67,7 +72,12 @@ variable "private_subnet_2_cidr"{
     default = "10.0.12.0/24"
 }
 
-variable "aws_nat_gateway" {
+variable "nat_gw" {
     type = string
     default = "nat_gateway"
+}
+
+variable "internet_gw" {
+    type = string
+    default = "internet_gateway"
 }
