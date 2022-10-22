@@ -14,3 +14,14 @@ variable "instance_type" {
   type    = string
   default = "t2.micro"
 }
+
+variable "ingress_ports"{
+  type = list(string)
+  description = "List of ingress rules"
+  default = [ "22", "80", "443", "3306", "53" ]
+}
+
+// variable "cidr_blocks" {
+//   type = list(string)
+//   default = [ "0.0.0.0/0", "0.0.0.0/0","0.0.0.0/0","0.0.0.0/0", "0.0.0.0/0,"]
+// }
