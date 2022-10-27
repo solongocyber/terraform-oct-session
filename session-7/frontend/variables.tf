@@ -22,3 +22,13 @@ variable "environment" {
     type = string
     default = "dev"
 }
+
+variable "project" {
+    type = string
+    default = "cat"
+}
+
+variable "stage" {
+    type = string
+    default = "nonprod"
+}

@@ -8,4 +8,4 @@ variable "snapshot" {
   type        = bool
   description = "Boolean for creating shapshot"
   default     = false #false means create snapshot. true means do not create snapshot
-}
+}                # true means do not create snapshot

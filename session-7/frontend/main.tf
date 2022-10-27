@@ -1,36 +1,42 @@
-resource "aws_sqs" "main" {
-    name = "${var.env}-sqs-0"
+
+ 
+
+######### v1 ############
+
+resource "aws_sqs_queue" "main" {
+    name = "main-sqs-0" 
+    tags = {
+        Name = "main-sqs"  # this is name tag and it match with resource name.
+        Team = "DevOps"      # others are comman tags
+        Owner = "Solongo"
+        Environment = "Dev"
+        Project = "AWS"
+        Account = "Nonprod"
+    }
+}
+
+###### v2 with variable #######
+
+resource "aws_sqs_queue" "main1" {
+    name = "${var.env}-sqs-1"
     tags = {
         Name = "${var.env}-sqs-0"
         Team = var.team
         Owner = var.owner
         Environment = var.environment
-        Project = "AWS"
-        Account = "Nonprod"
+        Project = var.project
+        Account = var.stage
     }
 }
 
-resource "aws_sqs" "main_1" {
-    name = "main-sqs-1"
-    tags = {
-        Name = "main-sqs-1"
-        Team = "DevOps"
-        Owner = "Solongo"
-        Environment = "Dev"
-        Project = "AWS"
-        Account = "Nonprod"
-    }
+######### v3 with local ########
+
+resource "aws_sqs_queue" "main_2" {
+    name = replace(local.name, "rtype", "sqs-2")
+    tags = merge(local.common_tags, { Name = replace(local.name, "rtype" , "sqs-2")})
 }
 
-resource "aws_sqs" "main_2" {
-    name = "main-sqs-2"
-    tags = {
-        Name = "main-sqs-2"
-        Team = "DevOps"
-        Owner = "Solongo"
-        Environment = "Dev"
-        Project = "AWS"
-        Account = "Nonprod"
-    }
-}
-
+# Name tag means it match with resource name.
+# Comman tags
+// tags = merge(local.common_tags, { Name = replace(local.name, "rtype", "sqs-1") })
+//   name = "aws-${var.region}-${var.stage}-${var.env}-${var.project}-rtype"
