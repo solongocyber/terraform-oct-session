@@ -6,6 +6,8 @@ variable "env" {
 
 variable "snapshot" {
   type        = bool
-  description = "Boolean for creating shapshot"
-  default     = false #false means create snapshot. true means do not create snapshot
+  description = "Boolean for creating Database shapshot"
+  default     = false
 }                # true means do not create snapshot
+                 # false means create snapshot
+                 # final_snapshot_identifier needed if it's false.
