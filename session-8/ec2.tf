@@ -57,7 +57,7 @@ resource "aws_key_pair" "terraform_server" {
 
 ############ Local exec #################
 
-resource "null_resource" "local_scripts" {
+resource "null_resource" "local_script" {
   provisioner "local-exec" {
 
   
